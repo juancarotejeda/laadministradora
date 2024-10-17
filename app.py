@@ -18,11 +18,16 @@ def login():
           n_paradas+=paradax                    
     return render_template('login.html',n_paradas=n_paradas,titulo=titulo)
 
-# ruta para nosotros
-@app.route('/nosotros')
-def nosotros():
-    titulo = "nosotros"
-    return render_template('nosotros.html', titulo=titulo)
+@app.route("/new_data", methods=["GET", "POST"])
+def new_data():  
+   if request.method == 'POST':
+       global parada
+       parada=request.form['parada']
+       cedula=request.form["cedula"]
+       password=request.form["clave"]
+       resultado=funciones.verificacion(parada,cedula,password)    
+       if resultado : 
+        return redirect (url_for("info")) 
 
 # bloque de prueba
 if __name__ == "__main__":

@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
     <!-- css -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/login-estilo.css')}}">
-
 </head>
+<body>
+  <div class="center">   
+  <div class="formulario">
+  <h1>Login</h1> 
   <form  method='POST' action="/new_data">   
          <div class="input-contenedor">  
             <select name="parada" id="parada">
@@ -40,3 +43,5 @@
     &copy; Copyright 2024 by <a href="http://www.cessrl.blogspot.com">La Administradora</a>.
 {% endblock %}    
 </footer> 
+</body>
+</html>
