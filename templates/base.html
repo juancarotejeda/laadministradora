@@ -10,23 +10,24 @@
     <link rel="stylesheet" href="{{url_for('static', filename='css/estilo.css')}}">
 
 </head>
-<body>
-    <!-- seccion de navegación -->
-    <header>
-        {% include "shared/nav.html" %}
-    </header>
-    <!-- seccion principal -->
-    <main class="row">
-        {% block principal  %}
-        
-        {% endblock  %}
-    </main>
-    <!-- pie de pagina  -->
-    <footer>
-        {% include "shared/footer.html" %}
-    </footer>
+    {% block header %} 
+    <body>  
+    <header class="headers"> 
+     <div class="logo">
+       <img src="/static/images/logo_motoben.png" alt="logo de la Adm.">
+    </div> 
+    <nav >
+     <ul class="menu">
+        <li><a href="{{url_for('info')}}">GENERAL</a></li>
+        <li><a href="{{url_for('finanzas')}}">FINANZAS</a></li>
+        <li><a href="{{url_for('aportes')}}">APORTES</a></li>
+        <li><a href="{{url_for('administrar')}}">DIRECCION</a></li>
+     </ul>   
+    </nav>
+    <a href="#" class="btn"><button>Contactar</button></a>
+    {% endblock %}
+    </header> 
+    </body>
+    </html>
 
-    <!-- script de bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>
+    
