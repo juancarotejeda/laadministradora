@@ -8,6 +8,7 @@ def modificar_db(query):
     cursor= connection.cursor()  
     cursor.execute(query)     
     connection.commit()
+    connection.close()
     return
 
 def consultar_db(query):
