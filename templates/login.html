@@ -1,21 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+<meta charset="utf-8">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> {{ titulo }} </title>
-    <!-- bootstrap -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
-    <!-- css -->
-    <link rel="stylesheet" href="{{url_for('static', filename='css/login-estilo.css')}}">
-</head>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+ <link rel="stylesheet" href="/static/css/login-estilo.css">
+</head>  
 <body>
   <div class="center">   
   <div class="formulario">
-  <h1>LA ADMINISTRADORA</h1> 
+  <h1>Login</h1>  
   <form  method='POST' action="/new_data">   
          <div class="input-contenedor">  
-            <select name="parada" id="parada">
+            <select name="parada" >
             {%for parada in n_paradas%}
             <option value = {{parada}} >{{parada}}</option>
             {%endfor%}

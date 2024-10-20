@@ -3,7 +3,7 @@ body {
     max-height: 900px;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
-    background: url(/static/images/imagen.jpg);
+    background: url(/static/images/banner.png);
     background-size:100%;
     background-attachment:fixed;
 
